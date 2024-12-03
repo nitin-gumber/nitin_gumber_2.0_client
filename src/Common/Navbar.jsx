@@ -18,7 +18,7 @@ export const Navbar = () => {
     <>
       <div
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out 
-        ${color === "transparent" ? "bg-transparent" : "bg-gray-700 text-white"}
+        ${color === "transparent" ? "bg-transparent" : "bg-blue-800 text-white"}
           `}
       >
         <div className="flex justify-between md:justify-around items-center h-full  mx-auto py-2 px-4">
