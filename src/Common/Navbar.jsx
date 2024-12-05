@@ -33,7 +33,7 @@ export const Navbar = () => {
             <img
               src={userImg}
               className="w-10 h-10 rounded-full aspect-square object-cover"
-              alt=""
+              alt="Nitin Gumber"
             />
             <span>Nitin Gumber</span>
           </div>
