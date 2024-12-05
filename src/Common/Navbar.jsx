@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import userImg from "../assets/image/userImg.jpg";
+import userImg from "../assets/images/image.webp";
 import { Slant as Hamburger } from "hamburger-react";
 import { Menubar } from "./Menubar";
 
