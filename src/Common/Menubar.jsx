@@ -24,9 +24,9 @@ export const Menubar = ({ setOpen, isOpen }) => {
     <>
       {/* Overlay */}
       <div
-        className={`fixed inset-0 z-40 transition-transform duration-500 ease-in-out ${
+        className={`fixed inset-0 z-40 transition-all duration-500 ease-linear ${
           isOpen
-            ? "bg-black bg-opacity-50"
+            ? "bg-black bg-opacity-50 pointer-events-auto"
             : "bg-transparent pointer-events-none"
         }`}
         onClick={() => setOpen(false)}

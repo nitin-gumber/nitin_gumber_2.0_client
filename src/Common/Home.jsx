@@ -26,19 +26,20 @@ function Home() {
       description:
         "I can code my own designs or even use the customer's design as base. My focus is to generate clean code that's well structured for reliability.",
     },
+    
     {
       id: 2,
-      title: "SEO",
-      icon: <FaCode className="text-5xl text-blue-500" />,
-      description:
-        "I can setup your project to use SEO principles which will push your project to the first page on search engines and save you ads money.",
-    },
-    {
-      id: 3,
       title: "Development",
       icon: <MdOutlineComputer className="text-5xl text-blue-500" />,
       description:
         "Successful online projects start with good design. It establishes a solid foundation for future development and allows for long term growth.",
+    },
+    {
+      id: 3,
+      title: "SEO",
+      icon: <FaCode className="text-5xl text-blue-500" />,
+      description:
+        "I can setup your project to use SEO principles which will push your project to the first page on search engines and save you ads money.",
     },
   ];
 
@@ -176,7 +177,7 @@ function Home() {
             Languages and Frameworks
           </h2>
           <div className=" mt-10">
-            <Marquee gradient={false} speed={70} pauseOnHover={true}>
+            <Marquee gradient={false} speed={70}>
               {languages.map((language) => {
                 return (
                   <div key={language.id} className="rounded-lg p-5 m-7">
@@ -416,15 +417,75 @@ function Home() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20" id="contact">
-          <h2 className="text-4xl font-semibold text-gray-800 text-center">
+        <section className="py-20 bg-[#0080C0] min-h-screen" id="contact">
+          <h2 className="text-4xl font-semibold  text-center text-white">
             Contact Us
           </h2>
 
-          <div
-          className="min-h-screen"
-          >
-            
+          <div className="max-w-2xl mx-auto w-11/12 mt-10 rounded-lg">
+            <form className="flex flex-col gap-5 font-montserrat">
+              <div className="flex flex-col md:flex-row gap-5">
+                <div className="flex flex-col gap-1 w-full">
+                  <label htmlFor="firstName" className="text-white">
+                    First Name
+                  </label>
+                  <input
+                    id="firstName"
+                    type="text"
+                    placeholder="First Name"
+                    className="border-2 border-gray-200 rounded-lg p-2 focus:outline-none"
+                  />
+                </div>
+                <div className="flex flex-col gap-1 w-full">
+                  <label htmlFor="lastName" className="text-white">
+                    Last Name
+                  </label>
+                  <input
+                    id="lastName"
+                    security="off"
+                    name="password"
+                    type="text"
+                    placeholder="Last Name"
+                    className="border-2 border-gray-200 rounded-lg p-2 focus:outline-none"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-1">
+                <label htmlFor="email" className="text-white">
+                  Your Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="name@example.com"
+                  className="border-2 border-gray-200 rounded-lg p-2 focus:outline-none"
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label htmlFor="subject" className="text-white">
+                  Your Subject
+                </label>
+                <input
+                  id="subject"
+                  type="text"
+                  placeholder="Let us know how we can help you"
+                  className="border-2 border-gray-200 rounded-lg p-2 w-full focus:outline-none"
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label htmlFor="message" className="text-white">
+                  Your Message
+                </label>
+                <textarea
+                  id="message"
+                  placeholder="Your Message"
+                  className="border-2 border-gray-200 rounded-lg p-2 w-full min-h-24 focus:outline-none"
+                ></textarea>
+              </div>
+              <button className="border-white border-2 text-white py-3 rounded-md text-base w-fit px-7 uppercase mt-3 hover:border-blue-900 hover:brightness-95 hover:shadow-sm hover:shadow-slate-800">
+                Send Message
+              </button>
+            </form>
           </div>
         </section>
       </div>
