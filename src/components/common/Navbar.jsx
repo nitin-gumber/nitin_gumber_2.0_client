@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import userImg from "../assets/images/image.webp";
+import userImg from "../../assets/images/image.webp";
 import { Slant as Hamburger } from "hamburger-react";
 import { Menubar } from "./Menubar";
+import resume from "../../assets/Resume/Resume.pdf";
 
 export const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -13,8 +14,8 @@ export const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 80) {
-        setBgColor("bg-blue-900 text-white");
-      } else{
+        setBgColor("bg-[#065A86] text-white");
+      } else {
         setBgColor("bg-white text-black");
       }
     };
@@ -27,19 +28,28 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", link: "#home" },
-    { name: "Skills", link: "#skills" },
-    { name: "Projects", link: "#projects" },
-    { name: "Contact", link: "#contact" },
-    { name: "My Blogs", link: "#blogs" },
-    { name: "Resume", link: "#resume" },
+    { name: "Home", link: "#home", target: "_self", rel: "" },
+    { name: "Skills", link: "#skills", target: "_self", rel: "" },
+    { name: "Projects", link: "#projects", target: "_self", rel: "" },
+    { name: "Contact", link: "#contact", target: "_self", rel: "" },
+    { name: "My Blogs", link: "#blogs", target: "_self", rel: "" },
+    { name: "Resume", link: resume, target: "_", rel: "noopener noreferrer" },
   ];
 
   const socialLinks = [
-    { icon: <FaXTwitter />, link: "https://twitter.com" },
-    { icon: <FaGithub />, link: "https://github.com" },
-    { icon: <FaLinkedin />, link: "https://linkedin.com" },
-    { icon: <FaInstagram />, link: "https://instagram.com" },
+    {
+      icon: <FaXTwitter />,
+      link: "https://x.com/i/flow/login?redirect_after_login=%2FNitin601",
+    },
+    { icon: <FaGithub />, link: "https://github.com/Nitin-Gumber" },
+    {
+      icon: <FaLinkedin />,
+      link: "https://www.linkedin.com/in/nitin-gumber-web-dev",
+    },
+    {
+      icon: <FaInstagram />,
+      link: "https://www.instagram.com/nitin.gumber_?igsh=ODA1NTc5OTg5Nw==",
+    },
   ];
 
   return (
@@ -65,6 +75,8 @@ export const Navbar = () => {
               <li key={index}>
                 <a
                   href={item.link}
+                  target={item.target}
+                  rel={item.rel}
                   className="cursor-pointer hover:text-blue-500 hover:transition-colors"
                 >
                   {item.name}
@@ -94,7 +106,7 @@ export const Navbar = () => {
             <Hamburger
               direction="right"
               size={30}
-              color={bgColor === "bg-blue-900 text-white" ? "white" : "black"}
+              color={bgColor === "bg-[#065A86] text-white" ? "white" : "black"}
               toggle={setOpen}
               toggled={isOpen}
             />

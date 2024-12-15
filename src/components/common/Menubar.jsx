@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
-import { FaTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import resume from "../../assets/Resume/Resume.pdf";
 
 export const Menubar = ({ setOpen, isOpen }) => {
   const menuItems = [
-    { name: "HOME", link: "#home" },
+    { name: "HOME", link: "#home", target: "_self", rel: "" },
     { name: "SKILLS", link: "#skills" },
-    { name: "PROJECTS", link: "#projects" },
+    { name: "PROJECTS", link: "#projects", target: "_self", rel: "" },
     { name: "CONTACT", link: "#contact" },
-    { name: "MY BLOGS", link: "#blogs" },
-    { name: "RESUME", link: "#resume" },
+    { name: "MY BLOGS", link: "#blogs", target: "_self", rel: "" },
+    { name: "RESUME", link: resume, target: "_", rel: "noopener noreferrer" },
   ];
 
   // Manage body scroll when the sidebar is open
@@ -24,7 +26,7 @@ export const Menubar = ({ setOpen, isOpen }) => {
     <>
       {/* Overlay */}
       <div
-        className={`fixed inset-0 z-40 transition-all duration-500 ease-linear ${
+        className={`fixed inset-0 z-40 transition-all duration-500 ease-linear md:hidden ${
           isOpen
             ? "bg-black bg-opacity-50 pointer-events-auto"
             : "bg-transparent pointer-events-none"
@@ -33,7 +35,7 @@ export const Menubar = ({ setOpen, isOpen }) => {
       >
         {/* Sidebar */}
         <div
-          className={`fixed top-0 left-0 bg-white w-full h-full shadow-lg z-50 transform transition-transform duration-500 ease-in-out ${
+          className={`fixed top-0 left-0 bg-white w-full h-full shadow-lg z-50 transform transition-transform duration-500 ease-in-out md:hidden ${
             isOpen ? "translate-x-1/3" : "translate-x-full"
           }`}
           onClick={(e) => e.stopPropagation()}
@@ -46,6 +48,8 @@ export const Menubar = ({ setOpen, isOpen }) => {
                 <li key={index}>
                   <a
                     href={item.link}
+                    target={item.target}
+                    rel={item.rel}
                     onClick={() => setOpen(false)}
                     className="text-lg font-medium text-gray-800 cursor-pointer hover:text-blue-500 transition-colors"
                   >
@@ -60,17 +64,17 @@ export const Menubar = ({ setOpen, isOpen }) => {
             <ul className="flex justify-start gap-4 text-2xl text-gray-600 mt-8 px-10">
               <li>
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/i/flow/login?redirect_after_login=%2FNitin601"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-gray-950 transition-colors"
                 >
-                  <FaTwitter />
+                  <FaXTwitter />
                 </a>
               </li>
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Nitin-Gumber"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-black transition-colors"
@@ -80,7 +84,7 @@ export const Menubar = ({ setOpen, isOpen }) => {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/nitin-gumber-web-dev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-blue-700 transition-colors"
@@ -90,7 +94,7 @@ export const Menubar = ({ setOpen, isOpen }) => {
               </li>
               <li>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/nitin.gumber_?igsh=ODA1NTc5OTg5Nw=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-pink-500 transition-colors"
@@ -105,5 +109,3 @@ export const Menubar = ({ setOpen, isOpen }) => {
     </>
   );
 };
-
-export default Menubar;
