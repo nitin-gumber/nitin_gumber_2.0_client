@@ -41,14 +41,14 @@ export const Navbar = () => {
       icon: <FaXTwitter />,
       link: "https://x.com/i/flow/login?redirect_after_login=%2FNitin601",
     },
-    { icon: <FaGithub />, link: "https://github.com/Nitin-Gumber" },
+    { icon: <FaGithub />, link: "https://github.com/nitin-gumber" },
     {
       icon: <FaLinkedin />,
       link: "https://www.linkedin.com/in/nitin-gumber-web-dev",
     },
     {
       icon: <FaInstagram />,
-      link: "https://www.instagram.com/nitin.gumber_?igsh=ODA1NTc5OTg5Nw==",
+      link: "https://www.instagram.com/nitin.gumber_",
     },
   ];
 

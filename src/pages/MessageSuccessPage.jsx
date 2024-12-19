@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Lottie from "lottie-react";
 import successAnimationData from "../assets/Animation/Animation - 1727627516570.json"; // Lottie animation JSON file
+import { useNavigate } from "react-router-dom";
 
 export const MessageSuccessPage = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/");
+    }, 5000);
+
+    // Cleanup the timer on component unmount
+    return () => clearTimeout(timer); 
+  }, [navigate]);
+
   return (
     <>
       <div className="flex flex-col items-center justify-center h-screen text-center">

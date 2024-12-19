@@ -7,7 +7,7 @@ import { MessageSuccessPage } from "./pages/MessageSuccessPage";
 
 function App() {
   const contactData = useSelector((state) => state.contactData);
- const contactDataValues = Object.values(contactData)[0];
+  const contactDataValues = Object.values(contactData)[0];
 
   return (
     <>
@@ -15,11 +15,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Home />} />
-        {
-          contactDataValues && (
-            <Route path="/message-sent/success" element={<MessageSuccessPage />} />
-          )
-        }
+        {contactDataValues && (
+          <Route
+            path="/message-sent/success"
+            element={<MessageSuccessPage />}
+          />
+        )}
       </Routes>
     </>
   );
