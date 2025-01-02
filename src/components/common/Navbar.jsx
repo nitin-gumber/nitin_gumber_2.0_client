@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import userImg from "../../assets/images/image.webp";
 import { Slant as Hamburger } from "hamburger-react";
 import { Menubar } from "./Menubar";
 import resume from "../../assets/Resume/Resume.pdf";
+import { SocialMedia } from "./SocialMedia";
 
 export const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -34,22 +33,6 @@ export const Navbar = () => {
     { name: "Contact", link: "#contact", target: "_self", rel: "" },
     { name: "My Blogs", link: "#blogs", target: "_self", rel: "" },
     { name: "Resume", link: resume, target: "_", rel: "noopener noreferrer" },
-  ];
-
-  const socialLinks = [
-    {
-      icon: <FaXTwitter />,
-      link: "https://x.com/i/flow/login?redirect_after_login=%2FNitin601",
-    },
-    { icon: <FaGithub />, link: "https://github.com/nitin-gumber" },
-    {
-      icon: <FaLinkedin />,
-      link: "https://www.linkedin.com/in/nitin-gumber-web-dev",
-    },
-    {
-      icon: <FaInstagram />,
-      link: "https://www.instagram.com/nitin.gumber_",
-    },
   ];
 
   return (
@@ -86,20 +69,10 @@ export const Navbar = () => {
           </ul>
 
           {/* Desktop Social Links */}
-          <ul className="hidden md:flex items-center gap-x-4 text-2xl">
-            {socialLinks.map((social, index) => (
-              <li key={index}>
-                <a
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-500 hover:transition-colors"
-                >
-                  {social.icon}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <SocialMedia
+            className="hidden md:flex justify-center gap-4 text-2xl"
+            bgColor={bgColor}
+          />
 
           {/* Mobile Hamburger */}
           <div className="md:hidden">

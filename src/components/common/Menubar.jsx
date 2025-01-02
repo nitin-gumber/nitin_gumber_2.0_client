@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import resume from "../../assets/Resume/Resume.pdf";
+import { SocialMedia } from "./SocialMedia";
 
 export const Menubar = ({ setOpen, isOpen }) => {
   const menuItems = [
@@ -61,48 +62,7 @@ export const Menubar = ({ setOpen, isOpen }) => {
             </ul>
 
             {/* Social Links */}
-            <ul className="flex justify-start gap-4 text-2xl text-gray-600 mt-8 px-10">
-              <li>
-                <a
-                  href="https://x.com/i/flow/login?redirect_after_login=%2FNitin601"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gray-950 transition-colors"
-                >
-                  <FaXTwitter />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Nitin-Gumber"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-black transition-colors"
-                >
-                  <FaGithub />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/nitin-gumber-web-dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-700 transition-colors"
-                >
-                  <FaLinkedin />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/nitin.gumber_?igsh=ODA1NTc5OTg5Nw=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-pink-500 transition-colors"
-                >
-                  <FaInstagram />
-                </a>
-              </li>
-            </ul>
+            <SocialMedia className="text-2xl mt-8 justify-start gap-4 px-10" />
           </nav>
         </div>
       </div>

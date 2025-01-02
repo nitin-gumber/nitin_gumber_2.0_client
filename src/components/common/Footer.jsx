@@ -1,6 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { SocialMedia } from "./SocialMedia";
 
 export const Footer = () => {
   return (
@@ -26,40 +25,8 @@ export const Footer = () => {
             <span className="text-lg font-medium text-gray-800">
               Social Media
             </span>
-            <div className="flex justify-center md:justify-start items-center gap-4 text-2xl mt-2">
-              <a
-                href="https://x.com/i/flow/login?redirect_after_login=%2FNitin601"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-950"
-              >
-                <FaXTwitter />
-              </a>
-              <a
-                href="https://github.com/Nitin-Gumber"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black"
-              >
-                <FaGithub />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/nitin-gumber-web-dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-700"
-              >
-                <FaLinkedin />
-              </a>
-              <a
-                href="https://www.instagram.com/nitin.gumber_?igsh=ODA1NTc5OTg5Nw=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-pink-500"
-              >
-                <FaInstagram />
-              </a>
-            </div>
+            {/* Social media */}
+            <SocialMedia className={"mt-2 justify-center text-2xl gap-4"} />
           </div>
           <div className="flex flex-col items-center md:items-start">
             <span className="text-lg font-medium text-gray-800">Address</span>
