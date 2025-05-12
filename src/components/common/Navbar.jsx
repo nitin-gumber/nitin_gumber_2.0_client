@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import userImg from "../../assets/images/image.webp";
 import { Slant as Hamburger } from "hamburger-react";
 import { Menubar } from "./Menubar";
 import resume from "../../assets/Resume/Resume.pdf";
@@ -31,7 +30,7 @@ export const Navbar = () => {
     { name: "Skills", link: "#skills", target: "_self", rel: "" },
     { name: "Projects", link: "#projects", target: "_self", rel: "" },
     { name: "Contact", link: "#contact", target: "_self", rel: "" },
-    { name: "My Blogs", link: "#blogs", target: "_self", rel: "" },
+    { name: "Blogs", link: "https://nitingumbner.hashnode.dev/", target: "_blank", rel: "" },
     { name: "Resume", link: resume, target: "_", rel: "noopener noreferrer" },
   ];
 
@@ -42,14 +41,11 @@ export const Navbar = () => {
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out shadow-md ${bgColor}`}
       >
         <div className="flex justify-between md:justify-around items-center mx-auto py-3 px-4">
-          {/* Logo Section */}
-          <div className="flex items-center gap-x-3">
-            <img
-              src={userImg}
-              className="w-10 h-10 rounded-full object-cover"
-              alt="Nitin Gumber"
-            />
-            <span className="font-lato-bold">Nitin Gumber</span>
+          {/* Logo */}
+          <div className="flex items-center border-2 border-blue-500 rounded-full p-2">
+            <a href="#home" className="text-2xl font-bold">
+              NG
+            </a>
           </div>
 
           {/* Desktop Links */}

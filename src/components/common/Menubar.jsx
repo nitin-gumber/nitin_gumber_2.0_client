@@ -10,7 +10,7 @@ export const Menubar = ({ setOpen, isOpen }) => {
     { name: "SKILLS", link: "#skills" },
     { name: "PROJECTS", link: "#projects", target: "_self", rel: "" },
     { name: "CONTACT", link: "#contact" },
-    { name: "MY BLOGS", link: "#blogs", target: "_self", rel: "" },
+    { name: "MY BLOGS", link: "https://nitingumbner.hashnode.dev/", target: "_self", rel: "" },
     { name: "RESUME", link: resume, target: "_", rel: "noopener noreferrer" },
   ];
 

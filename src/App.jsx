@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navbar } from "./components/common/Navbar";
 import { Home } from "./pages/Home";
+import { BlogSection } from "./components/core/BlogSection";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { MessageSuccessPage } from "./pages/MessageSuccessPage";
@@ -33,15 +34,14 @@ function App() {
         <div
           className={`fixed z-50 bottom-10 right-7 text-2xl bg-blue-500 p-4  rounded-full ${movetotop} transition-all ease-linear`}
         >
-          <FaArrowUp 
-          className="text-white"
-          />
+          <FaArrowUp className="text-white" />
         </div>
       </a>
 
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/blogs" element={<BlogSection />} />
         <Route path="*" element={<Home />} />
         {contactDataValues && (
           <Route
