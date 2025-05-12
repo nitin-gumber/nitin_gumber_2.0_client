@@ -30,7 +30,7 @@ export const Navbar = () => {
     { name: "Skills", link: "#skills", target: "_self", rel: "" },
     { name: "Projects", link: "#projects", target: "_self", rel: "" },
     { name: "Contact", link: "#contact", target: "_self", rel: "" },
-    { name: "Blogs", link: "https://nitingumbner.hashnode.dev/", target: "_blank", rel: "" },
+    { name: "Blogs", link: "https://blogs.nitingumber.me/", target: "_blank", rel: "" },
     { name: "Resume", link: resume, target: "_", rel: "noopener noreferrer" },
   ];
 
