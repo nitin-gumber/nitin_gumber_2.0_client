@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, memo } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import resume from "../../assets/Resume/Resume.pdf";
-import { SocialMedia } from "./SocialMedia";
+import  SocialMedia  from "./SocialMedia";
 
-export const Menubar = ({ setOpen, isOpen }) => {
+const  Menubar = ({ setOpen, isOpen }) => {
+
+
+  console.log("Menubar render")
+
   const menuItems = [
     { name: "HOME", link: "#home", target: "_self", rel: "" },
     { name: "SKILLS", link: "#skills" },
@@ -69,3 +73,5 @@ export const Menubar = ({ setOpen, isOpen }) => {
     </>
   );
 };
+
+export default memo(Menubar)

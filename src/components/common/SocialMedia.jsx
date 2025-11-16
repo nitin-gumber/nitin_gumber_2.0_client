@@ -1,8 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-export const SocialMedia = ({ className, bgColor }) => {
+const SocialMedia = ({ className, bgColor }) => {
+  console.log("Social Media Rendered")
   return (
     <>
       <div className={`flex items-center  ${className}`}>
@@ -43,3 +44,5 @@ export const SocialMedia = ({ className, bgColor }) => {
     </>
   );
 };
+
+export default memo(SocialMedia)

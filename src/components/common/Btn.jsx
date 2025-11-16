@@ -1,6 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 
-export const Btn = ({ text, link, type }) => {
+const Btn = ({ text, link, type }) => {
+  console.log("Button Rendered")
   return (
     <>
       <a href={link} target="_blank" rel="noreferrer noopener">
@@ -17,3 +18,5 @@ export const Btn = ({ text, link, type }) => {
     </>
   );
 };
+
+export default memo(Btn)

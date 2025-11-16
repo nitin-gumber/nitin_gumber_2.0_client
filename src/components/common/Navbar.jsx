@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Slant as Hamburger } from "hamburger-react";
-import { Menubar } from "./Menubar";
+import  Menubar  from "./Menubar";
 import resume from "../../assets/Resume/Resume.pdf";
-import { SocialMedia } from "./SocialMedia";
+import  SocialMedia  from "./SocialMedia";
 
 export const Navbar = () => {
   const [isOpen, setOpen] = useState(false);

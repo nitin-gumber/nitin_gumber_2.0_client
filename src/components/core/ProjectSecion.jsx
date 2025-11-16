@@ -1,5 +1,5 @@
 import React from "react";
-import { Btn } from "../common/Btn";
+import  Btn  from "../common/Btn";
 import StudyNotionImg from "../../assets/images/StudyNotionImg.webp";
 import WeatherAppImg from "../../assets/images/WeatherAppImg.webp";
 import TicTacToeGameImg from "../../assets/images/TicTacToeGameImg.webp";
